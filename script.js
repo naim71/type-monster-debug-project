@@ -27,6 +27,7 @@ const typeController = (e) => {
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
+  
   }
 
   // these are the valid character we are allowing to type
@@ -58,6 +59,7 @@ const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
+  errorCount++;
   return false;
 };
 
